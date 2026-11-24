@@ -1,1 +1,368 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Academic Homepage</title>
+
+<style>
+:root {
+    --blue: #315b83;
+    --dark: #25364a;
+    --light: #f5f7fa;
+    --text: #344054;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: white;
+    line-height: 1.75;
+}
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 65px 20px;
+}
+
+.header-content {
+    max-width: 1050px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 38px;
+    margin: 0 0 10px;
+}
+
+header p {
+    font-size: 17px;
+    max-width: 750px;
+    color: #e0e7ef;
+}
+
+nav {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-content {
+    max-width: 1050px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #172e47;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+section {
+    padding: 22px 0;
+    border-bottom: 1px solid #e8ebef;
+    scroll-margin-top: 65px;
+}
+
+h2 {
+    color: var(--dark);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: var(--blue);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: var(--blue);
+}
+
+.profile {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profile img {
+    width: 175px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--light);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.info {
+    margin-bottom: 18px;
+}
+
+.info strong {
+    color: var(--dark);
+}
+
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 9px;
+}
+
+.tag {
+    display: inline-block;
+    background: #edf3f8;
+    color: var(--blue);
+    padding: 4px 11px;
+    border-radius: 4px;
+    margin: 4px;
+    font-size: 13px;
+}
+
+.publication {
+    margin-bottom: 20px;
+}
+
+.publication strong {
+    color: var(--dark);
+}
+
+footer {
+    background: var(--light);
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    color: #667085;
+}
+
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile img {
+        width: 145px;
+        height: 155px;
+    }
+
+    .nav-content {
+        gap: 12px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Your Full Name</h1>
+        <p>
+            Researcher in Industrial Engineering, Data Science,
+            Operations Research, and Healthcare Systems.
+        </p>
+        <p>
+            <a href="#about" style="color:white;">Learn More ↓</a>
+        </p>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-content">
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<main class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="profile">
+            <!-- Replace profile.jpg with your own photograph -->
+            <img src="profile.jpg" alt="Profile photograph">
+
+            <div class="profile-info">
+                <p>
+                    I am an academic researcher with a background
+                    in Industrial Engineering. My research interests
+                    include data science, operations research,
+                    optimization, and healthcare systems.
+                </p>
+
+                <p>
+                    I am interested in developing analytical
+                    approaches and computational methods to solve
+                    complex real-world problems.
+                </p>
+
+                <p>
+                    <strong>ORCID:</strong>
+                    <a href="https://orcid.org/0000-0002-7409-6469"
+                       target="_blank">
+                       0000-0002-7409-6469
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="info">
+            <h3>M.Sc. in Industrial Engineering</h3>
+            <p>Amirkabir University of Technology | 2017</p>
+        </div>
+
+        <div class="info">
+            <h3>B.Sc. in Industrial Engineering</h3>
+            <p>Golpayegan University of Technology | 2015</p>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2>Research Interests</h2>
+
+        <span class="tag">Data Science</span>
+        <span class="tag">Operations Research</span>
+        <span class="tag">Healthcare Systems</span>
+        <span class="tag">Optimization</span>
+        <span class="tag">Machine Learning</span>
+
+        <p>
+            My research focuses on mathematical modeling,
+            optimization techniques, data-driven decision-making,
+            and their applications in complex systems.
+        </p>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="info">
+            <h3>Researcher</h3>
+            <p>Amirkabir University of Technology | 2017–Present</p>
+            <p>
+                Conducting research in Industrial Engineering,
+                Operations Research, and Data Science.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>Professional Experience in Industry</h3>
+            <p>
+                Add your current position, organization,
+                responsibilities, and achievements here.
+            </p>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <p>
+            For a complete list of publications, please visit
+            my <a href="https://orcid.org/0000-0002-7409-6469"
+            target="_blank">ORCID profile</a>.
+        </p>
+
+        <div class="publication">
+            <strong>Publication Title 1</strong>
+            <p>
+                Author names, Journal Name, Year.
+                <a href="#">DOI / Paper Link</a>
+            </p>
+        </div>
+
+        <div class="publication">
+            <strong>Publication Title 2</strong>
+            <p>
+                Author names, Journal Name, Year.
+                <a href="#">DOI / Paper Link</a>
+            </p>
+        </div>
+
+        <!-- Duplicate the publication block for additional papers -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:YOUR-EMAIL@example.com">
+                YOUR-EMAIL@example.com
+            </a>
+        </p>
+
+        <p>
+            <strong>ORCID:</strong>
+            <a href="https://orcid.org/0000-0002-7409-6469">
+                ORCID Profile
+            </a>
+        </p>
+
+        <p>
+            <strong>Google Scholar:</strong>
+            <a href="YOUR-GOOGLE-SCHOLAR-LINK">
+                Google Scholar Profile
+            </a>
+        </p>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            <a href="YOUR-LINKEDIN-LINK">
+                LinkedIn Profile
+            </a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Your Full Name | Academic Personal Website
+</footer>
+
+</body>
+</html>
+
