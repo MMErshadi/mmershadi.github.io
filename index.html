@@ -4,14 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | Academic Homepage</title>
+
+<title>Mohammad Mahdi Ershadi | Academic Homepage</title>
+
+<meta name="description" content="Academic homepage of Mohammad Mahdi Ershadi, researcher in Industrial Engineering, Data Science, Operations Research, and Healthcare Systems.">
 
 <style>
 :root {
-    --blue: #315b83;
-    --dark: #25364a;
-    --light: #f5f7fa;
-    --text: #344054;
+    --primary: #24476b;
+    --secondary: #426b91;
+    --text: #303b49;
+    --muted: #697586;
+    --background: #ffffff;
+    --border: #e7ebef;
+    --soft: #f5f8fb;
 }
 
 * {
@@ -23,164 +29,296 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
-    background: white;
+    background: var(--background);
     line-height: 1.75;
 }
 
+/* HEADER */
+
 header {
-    background: var(--dark);
+    background: linear-gradient(120deg, #203c59, #345d82);
     color: white;
-    padding: 65px 20px;
+    padding: 65px 25px 55px;
 }
 
-.header-content {
-    max-width: 1050px;
+.header-inner {
+    max-width: 1080px;
     margin: auto;
 }
 
 header h1 {
     font-size: 38px;
+    font-weight: 600;
     margin: 0 0 10px;
+    letter-spacing: -0.5px;
 }
 
-header p {
-    font-size: 17px;
-    max-width: 750px;
-    color: #e0e7ef;
+header .subtitle {
+    font-size: 19px;
+    margin: 0 0 12px;
+    color: #e2ebf4;
 }
+
+header .intro {
+    max-width: 780px;
+    font-size: 15px;
+    color: #e5edf5;
+}
+
+.header-links {
+    margin-top: 22px;
+}
+
+.header-links a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #aabed2;
+    padding: 7px 15px;
+    border-radius: 4px;
+    margin: 4px 7px 4px 0;
+    font-size: 13px;
+}
+
+.header-links a:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* NAVIGATION */
 
 nav {
     background: white;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
-.nav-content {
-    max-width: 1050px;
+.nav-inner {
+    max-width: 1080px;
     margin: auto;
-    padding: 12px 20px;
+    padding: 12px 25px;
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 24px;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--blue);
+    color: var(--primary);
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #172e47;
+    color: #829bb4;
 }
 
+/* MAIN CONTENT */
+
 .container {
-    max-width: 1050px;
+    max-width: 1080px;
     margin: auto;
-    padding: 35px 20px;
+    padding: 25px 25px 55px;
 }
 
 section {
-    padding: 22px 0;
-    border-bottom: 1px solid #e8ebef;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
     scroll-margin-top: 65px;
 }
 
 h2 {
-    color: var(--dark);
-    font-size: 25px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0 0 20px;
 }
 
 h3 {
-    color: var(--blue);
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 17px;
+    color: var(--primary);
+    margin: 0 0 4px;
+}
+
+p {
+    margin: 8px 0 14px;
 }
 
 a {
-    color: var(--blue);
+    color: var(--secondary);
 }
+
+a:hover {
+    color: var(--primary);
+}
+
+/* PROFILE */
 
 .profile {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 32px;
+    align-items: start;
 }
 
-.profile img {
-    width: 175px;
-    height: 190px;
+.profile-photo {
+    width: 180px;
+    height: 210px;
     object-fit: cover;
-    border-radius: 8px;
-    background: var(--light);
+    border-radius: 5px;
+    background: var(--soft);
+    border: 1px solid var(--border);
 }
 
-.profile-info {
-    flex: 1;
+.profile-details p {
+    margin-top: 0;
 }
 
-.info {
-    margin-bottom: 18px;
+.profile-details strong {
+    color: var(--primary);
 }
 
-.info strong {
-    color: var(--dark);
+.profile-links {
+    margin-top: 15px;
 }
 
-ul {
-    padding-left: 22px;
+.profile-links a {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 14px;
 }
 
-li {
-    margin-bottom: 9px;
+/* RESEARCH AREAS */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
 }
+
+.research-item {
+    padding: 14px 17px;
+    background: var(--soft);
+    border-left: 3px solid var(--secondary);
+}
+
+.research-item h3 {
+    margin-bottom: 5px;
+}
+
+.research-item p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--muted);
+}
+
+/* EDUCATION & EXPERIENCE */
+
+.entry {
+    margin-bottom: 23px;
+}
+
+.entry p {
+    margin: 3px 0;
+}
+
+.date {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.institution {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* PUBLICATIONS */
+
+.publication {
+    margin-bottom: 23px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.publication-title {
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+.publication p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.publication .journal {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.doi {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* PROFILE TAGS */
 
 .tag {
     display: inline-block;
     background: #edf3f8;
-    color: var(--blue);
-    padding: 4px 11px;
-    border-radius: 4px;
-    margin: 4px;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin: 4px 3px;
     font-size: 13px;
 }
 
-.publication {
-    margin-bottom: 20px;
-}
-
-.publication strong {
-    color: var(--dark);
-}
+/* FOOTER */
 
 footer {
-    background: var(--light);
-    text-align: center;
+    background: var(--soft);
     padding: 25px;
+    text-align: center;
+    color: var(--muted);
     font-size: 13px;
-    color: #667085;
 }
 
 @media (max-width: 650px) {
+    header {
+        padding: 45px 20px;
+    }
+
     header h1 {
         font-size: 29px;
     }
 
+    .container {
+        padding: 20px;
+    }
+
     .profile {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
-    .profile img {
+    .profile-photo {
         width: 145px;
-        height: 155px;
+        height: 165px;
     }
 
-    .nav-content {
-        gap: 12px 18px;
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-inner {
+        gap: 12px 17px;
     }
 }
 </style>
@@ -188,181 +326,657 @@ footer {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-    <div class="header-content">
-        <h1>Your Full Name</h1>
-        <p>
-            Researcher in Industrial Engineering, Data Science,
-            Operations Research, and Healthcare Systems.
+    <div class="header-inner">
+
+        <h1>Mohammad Mahdi Ershadi</h1>
+
+        <p class="subtitle">
+            Researcher in Industrial Engineering and Data Science
         </p>
-        <p>
-            <a href="#about" style="color:white;">Learn More ↓</a>
+
+        <p class="intro">
+            My research interests include data science, machine learning,
+            operations research, system analysis, and healthcare systems.
+            I am interested in developing analytical and computational
+            approaches to address complex real-world problems.
         </p>
+
+        <div class="header-links">
+            <a href="#about">Learn More ↓</a>
+            <a href="https://orcid.org/0000-0002-7409-6469"
+               target="_blank">ORCID Profile</a>
+            <a href="https://scholar.google.com/citations?user=YDqbCaMAAAAJ&hl=en"
+               target="_blank">Google Scholar</a>
+        </div>
+
     </div>
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-    <div class="nav-content">
+    <div class="nav-inner">
         <a href="#about">About Me</a>
-        <a href="#education">Education</a>
         <a href="#research">Research</a>
+        <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
+        <a href="#service">Academic Service</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
+
 <main class="container">
 
-    <section id="about">
-        <h2>About Me</h2>
+<!-- ABOUT ME -->
 
-        <div class="profile">
-            <!-- Replace profile.jpg with your own photograph -->
-            <img src="profile.jpg" alt="Profile photograph">
+<section id="about">
 
-            <div class="profile-info">
-                <p>
-                    I am an academic researcher with a background
-                    in Industrial Engineering. My research interests
-                    include data science, operations research,
-                    optimization, and healthcare systems.
-                </p>
+    <h2>About Me</h2>
 
-                <p>
-                    I am interested in developing analytical
-                    approaches and computational methods to solve
-                    complex real-world problems.
-                </p>
+    <div class="profile">
 
-                <p>
-                    <strong>ORCID:</strong>
-                    <a href="https://orcid.org/0000-0002-7409-6469"
-                       target="_blank">
-                       0000-0002-7409-6469
-                    </a>
-                </p>
+        <!-- Upload the researcher's photograph as profile.jpg -->
+        <img class="profile-photo"
+             src="profile.jpg"
+             alt="Mohammad Mahdi Ershadi">
+
+        <div class="profile-details">
+
+            <p>
+                I am Mohammad Mahdi Ershadi, an Industrial Engineering
+                researcher affiliated with Amirkabir University of
+                Technology, Tehran, Iran.
+            </p>
+
+            <p>
+                I received my Bachelor's degree in Industrial Engineering
+                from Isfahan University of Technology in 2015 and my
+                Master's degree in Industrial Engineering and Management
+                Systems from Amirkabir University of Technology in 2017.
+            </p>
+
+            <p>
+                Since 2017, I have been actively engaged in academic
+                research at Amirkabir University of Technology.
+                My research focuses on the intersection of data science,
+                operations research, system analysis, and healthcare
+                systems.
+            </p>
+
+            <p>
+                I have also contributed to the scientific community
+                through peer-review activities for international
+                academic journals.
+            </p>
+
+            <div class="profile-links">
+                <a href="https://orcid.org/0000-0002-7409-6469"
+                   target="_blank">ORCID</a>
+
+                <a href="https://scholar.google.com/citations?user=YDqbCaMAAAAJ&hl=en"
+                   target="_blank">Google Scholar</a>
+
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57212585059"
+                   target="_blank">Scopus</a>
+
+                <a href="https://www.webofscience.com/wos/author/record/1047849"
+                   target="_blank">Web of Science</a>
             </div>
+
         </div>
-    </section>
+    </div>
 
-    <section id="education">
-        <h2>Education</h2>
+</section>
 
-        <div class="info">
-            <h3>M.Sc. in Industrial Engineering</h3>
-            <p>Amirkabir University of Technology | 2017</p>
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+    <h2>Research Interests</h2>
+
+    <p>
+        My research interests span several interdisciplinary areas
+        of Industrial Engineering, computational intelligence,
+        and data-driven decision-making.
+    </p>
+
+    <div class="research-grid">
+
+        <div class="research-item">
+            <h3>Data Science and Machine Learning</h3>
+            <p>
+                Data-driven modeling, machine learning,
+                predictive analytics, and intelligent systems.
+            </p>
         </div>
 
-        <div class="info">
-            <h3>B.Sc. in Industrial Engineering</h3>
-            <p>Golpayegan University of Technology | 2015</p>
+        <div class="research-item">
+            <h3>Operations Research</h3>
+            <p>
+                Mathematical optimization, decision analysis,
+                and quantitative modeling.
+            </p>
         </div>
-    </section>
 
-    <section id="research">
-        <h2>Research Interests</h2>
+        <div class="research-item">
+            <h3>Healthcare Systems</h3>
+            <p>
+                Healthcare analytics, medical decision support,
+                hospital performance, and healthcare optimization.
+            </p>
+        </div>
 
+        <div class="research-item">
+            <h3>System Analysis</h3>
+            <p>
+                System modeling, simulation, complex systems,
+                and performance improvement.
+            </p>
+        </div>
+
+    </div>
+
+    <p style="margin-top:20px;">
+        <strong>Research keywords:</strong><br>
+
+        <span class="tag">Machine Learning & AI</span>
         <span class="tag">Data Science</span>
+        <span class="tag">System Analysis</span>
         <span class="tag">Operations Research</span>
         <span class="tag">Healthcare Systems</span>
         <span class="tag">Optimization</span>
-        <span class="tag">Machine Learning</span>
+        <span class="tag">Medical Analytics</span>
+
+    </p>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="entry">
+
+        <h3>Master of Science in Industrial Engineering
+            and Management Systems</h3>
+
+        <p class="institution">
+            Amirkabir University of Technology, Tehran, Iran
+        </p>
+
+        <p class="date">2015 – 2017</p>
+
+    </div>
+
+    <div class="entry">
+
+        <h3>Bachelor of Science in Industrial Engineering</h3>
+
+        <p class="institution">
+            Isfahan University of Technology, Isfahan, Iran
+        </p>
+
+        <p class="date">2011 – 2015</p>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <h2>Academic Experience</h2>
+
+    <div class="entry">
+
+        <h3>Researcher</h3>
+
+        <p class="institution">
+            Amirkabir University of Technology
+        </p>
+
+        <p class="date">2017 – Present</p>
 
         <p>
-            My research focuses on mathematical modeling,
-            optimization techniques, data-driven decision-making,
-            and their applications in complex systems.
+            Academic research in Industrial Engineering,
+            data science, operations research, system analysis,
+            and healthcare systems.
         </p>
-    </section>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
+    </div>
 
-        <div class="info">
-            <h3>Researcher</h3>
-            <p>Amirkabir University of Technology | 2017–Present</p>
-            <p>
-                Conducting research in Industrial Engineering,
-                Operations Research, and Data Science.
-            </p>
+    <p>
+        <strong>Institutional website:</strong>
+        <a href="https://aut.ac.ir/en" target="_blank">
+            Amirkabir University of Technology
+        </a>
+    </p>
+
+</section>
+
+
+<!-- PUBLICATIONS -->
+
+<section id="publications">
+
+    <h2>Selected Publications</h2>
+
+    <p>
+        My research has resulted in publications across
+        Industrial Engineering, Operations Research,
+        Healthcare Management, Machine Learning, and
+        Medical Data Analysis.
+    </p>
+
+    <p>
+        Below is a selection of publications.
+        For the complete and updated publication record,
+        please visit my
+        <a href="https://orcid.org/0000-0002-7409-6469"
+           target="_blank">ORCID profile</a>.
+    </p>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            A radiology-aware fuzzy deep learning framework with
+            entropy-guided feature selection for robust multi-disease
+            chest X-ray classification across multiple magnifications
         </div>
 
-        <div class="info">
-            <h3>Professional Experience in Industry</h3>
-            <p>
-                Add your current position, organization,
-                responsibilities, and achievements here.
-            </p>
-        </div>
-    </section>
-
-    <section id="publications">
-        <h2>Selected Publications</h2>
-
-        <p>
-            For a complete list of publications, please visit
-            my <a href="https://orcid.org/0000-0002-7409-6469"
-            target="_blank">ORCID profile</a>.
+        <p class="journal">
+            Radiological Physics and Technology, 2026
         </p>
 
-        <div class="publication">
-            <strong>Publication Title 1</strong>
-            <p>
-                Author names, Journal Name, Year.
-                <a href="#">DOI / Paper Link</a>
-            </p>
+        <a class="doi"
+           href="https://doi.org/10.1007/s12194-026-01110-5"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Entropy-guided semi-supervised framework for robust
+            chest X-ray segmentation using dynamic competition
+            and patch-wise contrastive learning
         </div>
 
-        <div class="publication">
-            <strong>Publication Title 2</strong>
-            <p>
-                Author names, Journal Name, Year.
-                <a href="#">DOI / Paper Link</a>
-            </p>
+        <p class="journal">
+            Biomedical Signal Processing and Control, 2026
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1016/j.bspc.2026.109933"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            An Intelligent Fuzzy Multi-Criteria Framework for
+            Joint Procurement Allocation and Logistics Network
+            Design under Sustainability and Risk Considerations
         </div>
 
-        <!-- Duplicate the publication block for additional papers -->
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:YOUR-EMAIL@example.com">
-                YOUR-EMAIL@example.com
-            </a>
+        <p class="journal">
+            Transnational Supply Chain Research, 2026
         </p>
 
-        <p>
-            <strong>ORCID:</strong>
-            <a href="https://orcid.org/0000-0002-7409-6469">
-                ORCID Profile
-            </a>
+        <a class="doi"
+           href="https://doi.org/10.65773/tscr.2.2.145"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Decoding DQM for Experimental Insights on Data Quality
+            Metadata's Impact on Decision-Making Process Efficacy
+        </div>
+
+        <p class="journal">
+            Iranian Journal of Information Processing and Management,
+            2025
         </p>
 
-        <p>
-            <strong>Google Scholar:</strong>
-            <a href="YOUR-GOOGLE-SCHOLAR-LINK">
-                Google Scholar Profile
-            </a>
+        <a class="doi"
+           href="https://doi.org/10.22034/jipm.2025.2019855.1504"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Application of Ensemble Learning for Respiratory
+            Ailment Diagnosis: Case Studies on Biomedical and
+            Chest X-ray Image Datasets
+        </div>
+
+        <p class="journal">
+            Qeios, 2025
         </p>
 
-        <p>
-            <strong>LinkedIn:</strong>
-            <a href="YOUR-LINKEDIN-LINK">
-                LinkedIn Profile
-            </a>
+        <a class="doi"
+           href="https://doi.org/10.32388/1NMNYE"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Socioeconomic analysis of infectious diseases based on
+            different scenarios using uncertain SEIAR system dynamics
+            with effective subsystems and ANFIS
+        </div>
+
+        <p class="journal">
+            Journal of Economic and Administrative Sciences, 2024
         </p>
-    </section>
+
+        <a class="doi"
+           href="https://doi.org/10.1108/JEAS-07-2021-0124"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Uncertain SEIAR system dynamics modeling for improved
+            community health management of respiratory virus diseases:
+            A COVID-19 case study
+        </div>
+
+        <p class="journal">
+            Heliyon, 2024
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1016/j.heliyon.2024.e24711"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            An integrated HFMEA simulation-based multi-objective
+            optimisation model to improve the performances of
+            hospitals: A case study
+        </div>
+
+        <p class="journal">
+            Journal of Simulation, 2023
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1080/17477778.2021.2015260"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Fusing clinical and image data for detecting the severity
+            level of hospitalized symptomatic COVID-19 patients
+            using hierarchical model
+        </div>
+
+        <p class="journal">
+            Research on Biomedical Engineering, 2023
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1007/s42600-023-00268-w"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            A multi-objective optimization model for logistic planning
+            in the crisis response phase
+        </div>
+
+        <p class="journal">
+            Journal of Humanitarian Logistics and Supply Chain
+            Management, 2022
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1108/JHLSCM-11-2020-0108"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Applications of dynamic feature selection and clustering
+            methods to medical diagnosis
+        </div>
+
+        <p class="journal">
+            Applied Soft Computing, 2022
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1016/j.asoc.2022.109293"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            A hierarchical machine learning model based on Glioblastoma
+            patients' clinical, biomedical, and image data to analyze
+            their treatment plans
+        </div>
+
+        <p class="journal">
+            Computers in Biology and Medicine, 2022
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1016/j.compbiomed.2022.106159"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            Logistic planning for pharmaceutical supply chain using
+            multi-objective optimization model
+        </div>
+
+        <p class="journal">
+            International Journal of Pharmaceutical and
+            Healthcare Marketing, 2021
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1108/IJPHM-01-2021-0004"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            An efficient Bayesian network for differential diagnosis
+            using experts' knowledge
+        </div>
+
+        <p class="journal">
+            International Journal of Intelligent Computing
+            and Cybernetics, 2020
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1108/IJICC-10-2019-0112"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <div class="publication">
+
+        <div class="publication-title">
+            An integrated HFMEA-DES model for performance improvement
+            of general hospitals: A case study
+        </div>
+
+        <p class="journal">
+            International Journal of Quality & Reliability
+            Management, 2020
+        </p>
+
+        <a class="doi"
+           href="https://doi.org/10.1108/IJQRM-08-2019-0277"
+           target="_blank">DOI</a>
+
+    </div>
+
+
+    <p style="margin-top:25px;">
+        <a href="https://orcid.org/0000-0002-7409-6469"
+           target="_blank">
+           View all publications on ORCID →
+        </a>
+    </p>
+
+</section>
+
+
+<!-- ACADEMIC SERVICE -->
+
+<section id="service">
+
+    <h2>Academic Service</h2>
+
+    <p>
+        I contribute to the academic community through
+        peer-review activities for international scientific
+        journals.
+    </p>
+
+    <p>
+        My ORCID record includes peer-review activity across
+        22 publications and grants, covering journals in
+        applied soft computing, healthcare, biomedical
+        engineering, simulation, data science, and related
+        research areas.
+    </p>
+
+    <p>
+        <a href="https://orcid.org/0000-0002-7409-6469"
+           target="_blank">
+           View ORCID activity record →
+        </a>
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        For academic collaboration, research discussions,
+        and professional inquiries, please feel free to
+        get in touch.
+    </p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:ershadi.mm1372@aut.ac.ir">
+            ershadi.mm1372@aut.ac.ir
+        </a>
+    </p>
+
+    <p>
+        <strong>Affiliation:</strong><br>
+        Amirkabir University of Technology<br>
+        Tehran, Iran
+    </p>
+
+    <p>
+        <strong>ORCID:</strong>
+        <a href="https://orcid.org/0000-0002-7409-6469"
+           target="_blank">
+           0000-0002-7409-6469
+        </a>
+    </p>
+
+    <p>
+        <strong>Google Scholar:</strong>
+        <a href="https://scholar.google.com/citations?user=YDqbCaMAAAAJ&hl=en"
+           target="_blank">
+           Academic Profile
+        </a>
+    </p>
+
+    <p>
+        <strong>Scopus:</strong>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57212585059"
+           target="_blank">
+           Author Profile
+        </a>
+    </p>
+
+</section>
 
 </main>
 
+
 <footer>
-    © 2026 Your Full Name | Academic Personal Website
+    <p>
+        © 2026 Mohammad Mahdi Ershadi.
+        All rights reserved.
+    </p>
+
+    <p>
+        Academic Personal Website
+    </p>
 </footer>
 
 </body>
 </html>
-
